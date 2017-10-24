@@ -1,8 +1,13 @@
-<% if (item.cover_image){ %>
-  <div class="col-12 mb-4">
-    <img class="img-fluid project-img" src="<%- config.root %><%- item.cover_image %>" alt="<%- item.title || "Untitled" %>">
+  <div class="row">
+    <div class="col-12 col-lg-8 offset-lg-2 mt-4">
+      <div class="portfolio-title my-4">
+        <h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
+        <!-- <hr>
+        <span class="date"><%- moment(item.date || '').format('YYYY-MM-DD')%></span> -->
+      </div>
+      <div class="col-12 portfolio-content">
+        <%- item.content %>
+      </div>
+    </div>
   </div>
-<% } %>
-<div class="col-12 pt-lg-3 mb-4 px-4 portfolio-content">
-  <%- item.content %>
-</div>
+  
