@@ -4,3 +4,16 @@ google_analytics:
 # Default portfolio post
 default_cover_image: /images/unsplash.jpg
 default_post_title: meiqiu
+
+# scripts
+scripts:
+  jquery: //cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js
+  tether: //cdn.bootcss.com/tether/1.4.0/js/tether.min.js
+  bootstrap: //cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js
+  moment: //cdn.bootcss.com/moment.js/2.19.0/moment-with-locales.min.js
+
+# css
+css:
+  bootstrap: //cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css
+  fontawesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
+  googlefonts: //fonts.lug.ustc.edu.cn/css?family=Crimson+Text|Open+Sans:300,800
