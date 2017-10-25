@@ -56,7 +56,7 @@ title: My Awesome Portfolio Piece
 #### Post image
 Each post on this theme requires a cover image. If no cover image is provided, a default cover image is used. Specify your own image like this.
 ```
-cover_image: /images/portfolio.jpg
+cover: /images/portfolio.jpg
 ```
 
 ### Creator

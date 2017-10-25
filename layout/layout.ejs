@@ -4,10 +4,9 @@
   <%- partial('_partial/head') %>
 
   <body>
-  	<div class="container-fluid navbar-container p-sm-5">
-      <!-- Header -->
-      <%- partial('_partial/header') %>
-  		
+    <!-- Header -->
+    <%- partial('_partial/header') %>
+  	<div class="container-fluid navbar-container px-sm-5">
   		<%- body %>
       <% if (page.total > 1) { %>
     <nav class="page-nav">

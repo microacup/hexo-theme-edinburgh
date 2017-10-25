@@ -1,17 +1,17 @@
-<div class="row">
-  <div class="col-12">
-    <img class="img-fluid project-img" src="<%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || theme.default_post_title || "Untitled" %>">
-  </div>
-</div>
-<div class="row">
+<div class="row <%= item.layout%>">
   <div class="col-12 col-lg-8 offset-lg-2 mt-4">
     <div class="portfolio-title my-4">
-      <h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
+      <h1 class="title"><%- item.title || theme.default_post_title || "Untitled" %></h1>
+      <% if (item.excerpt) { %>
+      <div class="col-12 portfolio-excerpt">
+          <%- item.excerpt %>
+      </div>
+      <% } %>
       <hr>
       <span class="date"><%- moment(item.date || '').format('YYYY-MM-DD')%></span>
     </div>
     <div class="col-12 portfolio-content">
-      <%- item.content %>
+      <%- item.more %>
     </div>
   </div>
 </div>

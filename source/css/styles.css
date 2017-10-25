@@ -1,5 +1,6 @@
 body {
-	font-family: -apple-system,BlinkMacSystemFont,"Microsoft Yahei UI Light",'Open Sans', sans-serif,"Segoe UI",Roboto,Helvetica,"PingFang SC","WenQuanYi Micro Hei",Arial,"Apple sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: -apple-system,BlinkMacSystemFont,"Microsoft Yahei UI Light","Open Sans", sans-serif,"Segoe UI",Helvetica,"PingFang SC","WenQuanYi Micro Hei",Arial;
+	color: #555;
 }
 
 form {
@@ -44,6 +45,13 @@ pre code {
 	background-color: #f7f7f7;
 }
 
+blockquote {
+	margin: 2em 0;
+	padding-left: 20px;
+	border-left: 4px solid #42b983;
+	background-color: #efefef;
+}
+
 .date {
 	color: #666;
 	font-family: 'Montserrat', sans-serif;
@@ -57,11 +65,20 @@ pre code {
 	text-align: center;
 }
 
+.portfolio-title .title {
+	font-weight: bold;
+}
+
 .portfolio-title hr {
 	border-color: #999;
 	width: 5%;
 	margin-top: 20px;
 	margin-bottom: 10px;
+}
+
+.portfolio-excerpt {
+	color: #787878;
+	font-style: italic;
 }
 
 .portfolio-content {
@@ -88,9 +105,13 @@ h1, h2, h3 {
 }
 
 .navbar-brand {
+	letter-spacing: 0.5px;
+}
+
+.navbar-brand .title {
 	font-weight: 800;
 	font-size: 1.5rem;
-	letter-spacing: 0.5px;
+	vertical-align: middle;
 }
 
 .navbar {
@@ -150,9 +171,7 @@ h1, h2, h3 {
 }
 
 .hovereffect .overlay-text {
-	font-size: 1.3rem;
-	font-family: 'Crimson Text', sans-serif;
-	font-weight: 300;
+	font-size: 1.2rem;
 	color: #000;
 	left: 50%;
 	position: absolute;
@@ -165,6 +184,10 @@ h1, h2, h3 {
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
+}
+
+.hovereffect .overlay-text .title {
+	font-weight: bold;
 }
 
 .hovereffect:hover .overlay-text {
@@ -207,20 +230,51 @@ h1, h2, h3 {
 	font-family: 'Crimson Text', sans-serif;
 	font-weight: 300;
 	margin: 0 10px;
-	color: #000;
 }
 
 footer {
 	border-top: 1px solid #eee;
 }
 
-a, a:visited, a:active, a:focus {
+a, a:link, a:visited, a:focus, a:hover, a:active {
+	text-decoration: none;
 	color: #555;
 	background-color: transparent;
 	-webkit-transition: color 0.2s ease;
 	transition: color 0.2s ease;
 }
-a, a:link, a:visited, a:focus, a:hover, a:active {
-	text-decoration: none;
+
+.post img, .photo img {
+	max-width: 100%;
+	display: block;
+	font-size: 0;
+	margin-bottom: 10px;
 }
 
+.archive-item .post-item {
+	border-left: 2px solid #ccc;
+	position: relative;
+}
+
+.archive-item .post-go {
+	color: #787878;
+}
+
+.archive-item  .post-go .title {
+	font-weight: bold;
+	color: #555;
+}
+
+.archive-item .post-item:before {
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	z-index: 1;
+	display: block;
+	content: "";
+	background-color: #ccc;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	border: 5px solid #fff;
+}

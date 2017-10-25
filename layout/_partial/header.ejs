@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-light px-1 py-3 my-3 mb-sm-5">
-  <a class="navbar-brand ml-2" href="<%- config.root %>"><%-config.title || ""%></a>
-  <span><%-config.subtitle || ""%></span>
+<nav class="navbar navbar-expand-md navbar-light px-3 my-3">
+  <a class="navbar-brand ml-2" href="<%- config.root %>">
+    <img src="/images/favicon.ico" width="30" height="30" alt="">
+    <span class="title"><%-config.title || ""%></span>
+  </a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -14,3 +16,4 @@
     </ul>
   </div>
 </nav>
+<hr>
