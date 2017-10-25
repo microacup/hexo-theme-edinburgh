@@ -1,16 +1,9 @@
 <footer class="text-center mt-5 py-5">
-  <a href="https://twitter.com/?lang=en" target="_blank">
-    <i class="fa fa-twitter mr-4"></i>
-  </a>
-  <a href="https://www.facebook.com/" target="_blank">
-    <i class="fa fa-facebook mr-4"></i>
-  </a>
-  <a href="https://www.instagram.com/" target="_blank">
-    <i class="fa fa-instagram mr-4"></i>
-  </a>
-  <a href="https://www.linkedin.com/" target="_blank">
-    <i class="fa fa-linkedin mr-4"></i>
-  </a>
+  <% for (var name in config.social) { %>
+      <a href="<%= config.social[name] %>" target="_blank">
+          <i class="fa fa-<%= name %> mr-4"></i>
+        </a>
+  <% }%>
 </footer>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
   crossorigin="anonymous"></script>
