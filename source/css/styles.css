@@ -67,6 +67,7 @@ blockquote {
 
 .portfolio-title .title {
 	font-weight: bold;
+	font-size: 1.5rem;
 }
 
 .portfolio-title hr {
@@ -105,8 +106,18 @@ blockquote {
 
 h1, h2, h3 {
 	letter-spacing: 1px;
-	font-weight: 300;
+	font-weight: 600;
 	margin-bottom: 20px;
+	font-size: 1.25rem;
+}
+
+h4, h5 {
+	font-weight: 600;
+	font-size: 1.15rem;
+}
+
+h6 {
+	font-size: 1rem;
 }
 
 .navbar-brand {
@@ -282,4 +293,16 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
 	height: 18px;
 	border-radius: 50%;
 	border: 5px solid #fff;
+}
+
+@media screen and (max-width: 476px) {
+	.hovereffect img {
+		opacity: 0.3;
+		filter: alpha(opacity=20);
+	}
+
+	.hovereffect .overlay-text {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
 }
