@@ -98,6 +98,11 @@ blockquote {
 	border-bottom: 1px solid #555;
 }
 
+.portfplio-tags {
+	margin-top: 40px;
+	text-align: center;
+}
+
 h1, h2, h3 {
 	letter-spacing: 1px;
 	font-weight: 300;
@@ -171,7 +176,7 @@ h1, h2, h3 {
 }
 
 .hovereffect .overlay-text {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: #000;
 	left: 50%;
 	position: absolute;
@@ -225,7 +230,7 @@ h1, h2, h3 {
 	margin: 0 auto;
 	text-align: center;
 }
-.page-nav a,span {
+.page-nav a {
 	font-size: 1.3rem;
 	font-family: 'Crimson Text', sans-serif;
 	font-weight: 300;
@@ -248,7 +253,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
 	max-width: 100%;
 	display: block;
 	font-size: 0;
-	margin-bottom: 10px;
+	margin: 20px auto;
 }
 
 .archive-item .post-item {
