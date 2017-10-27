@@ -10,4 +10,32 @@
 <script src="<%= theme.scripts.popper %>"></script>
 <script src="<%= theme.scripts.bootstrap %>"></script>
 <script src="<%= theme.scripts.moment %>"></script>
+
+<% if (theme.fancybox){ %>
+  <script src="<%= theme.scripts.fancybox %>"></script>
+<% } %>
+<script type="text/javascript">
+  (function($){
+    // Caption
+  $('.portfolio-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+
+      var alt = this.alt;
+
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+
+      $(this).wrap('<a data-fancybox href="' + this.src + '" data-caption="' + alt + '" class="fancybox"></a>');
+    });
+
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+
+  if ($.fancybox){
+    $('.fancybox').fancybox();
+  }
+  })(jQuery);
+</script>
 <%- partial('baidu-tongji') %>
