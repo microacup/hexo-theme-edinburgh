@@ -1,5 +1,5 @@
 # Google Analytics Tracking ID
-google_analytics:
+google_analytics: UA-78267963-2
 
 # Default portfolio post
 default_cover: /images/unsplash.jpg
