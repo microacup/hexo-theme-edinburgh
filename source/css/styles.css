@@ -252,6 +252,11 @@ footer {
 	border-top: 1px solid #eee;
 }
 
+footer p {
+	font-size: 10px;
+	margin: 10px 0;
+}
+
 a, a:link, a:visited, a:focus, a:hover, a:active {
 	text-decoration: none;
 	color: #555;
