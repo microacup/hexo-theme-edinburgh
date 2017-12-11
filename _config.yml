@@ -13,7 +13,7 @@ scripts:
   tether: //cdn.bootcss.com/tether/1.4.0/js/tether.min.js
   bootstrap: //maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
   popper: //cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js
-  moment: //cdn.bootcss.com/moment.js/2.19.0/moment-with-locales.min.js
+  moment: //cdn.bootcss.com/moment.js/2.19.0/moment.min.js
   fancybox: //cdn.bootcss.com/fancybox/3.1.25/jquery.fancybox.min.js
 # css
 css:

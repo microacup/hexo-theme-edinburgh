@@ -135,7 +135,6 @@ h6 {
 }
 
 .nav-item {
-	font-size: 0.8rem;
 	font-weight: 300;
 	letter-spacing: 1.5px;
 }
@@ -272,13 +271,22 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
 	margin: 20px auto;
 }
 
-.archive-item .post-item {
+.archive-year-wrap {
+	letter-spacing: 1px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+.archive-item {
 	border-left: 2px solid #ccc;
 	position: relative;
 }
 
 .archive-item .post-go {
 	color: #787878;
+	display: block;
+	width: 100%;
 }
 
 .archive-item  .post-go .title {
@@ -286,18 +294,26 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
 	color: #555;
 }
 
-.archive-item .post-item:before {
+.archive-item:before {
 	position: absolute;
-	top: 10px;
-	left: -10px;
+	top: 9px;
+	left: -7px;
 	z-index: 1;
 	display: block;
 	content: "";
-	background-color: #ccc;
-	width: 18px;
-	height: 18px;
+	background-color: #999;
+	width: 12px;
+	height: 12px;
 	border-radius: 50%;
-	border: 5px solid #fff;
+	border: 2px solid #fff;
+}
+
+@media screen and (min-width: 476px) {
+	.archive-item .date {
+		position: absolute;
+		right: 0;
+		top: .5em;
+	}
 }
 
 @media screen and (max-width: 476px) {

@@ -1,3 +1,1 @@
-<% page.posts.forEach(function(item){ %>
-    <%- partial('_partial/portfolio-archive', {item: item}) %>
-<% }); %>
+<%- partial('_partial/archive', {pagination: config.archive, index: true}) %>
