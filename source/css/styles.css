@@ -251,14 +251,9 @@ footer {
 	border-top: 1px solid #eee;
 }
 
-footer p {
-	font-size: 10px;
-	margin: 10px 0;
-}
-
 a, a:link, a:visited, a:focus, a:hover, a:active {
 	text-decoration: none;
-	color: #555;
+	color: inherit;
 	background-color: transparent;
 	-webkit-transition: color 0.2s ease;
 	transition: color 0.2s ease;
@@ -326,4 +321,15 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
 		opacity: 1;
 		filter: alpha(opacity=100);
 	}
+}
+
+.host-coding {
+	font-size: 9px;
+	padding: 5px 0;
+	color: transparent;
+}
+
+.host-coding p {
+	margin: 0;
+	padding: 0;
 }

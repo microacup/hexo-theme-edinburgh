@@ -4,7 +4,12 @@
           <i class="fa fa-<%= name %> mx-4"></i>
         </a>
   <% }%>
-  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  
+  <% if (is_home()) { %>
+    <div class="host-coding">
+      <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+    </div>
+  <% }%>
 </footer>
 <script src="<%= theme.scripts.jquery %>"></script>
 <script src="<%= theme.scripts.tether %>"></script>
