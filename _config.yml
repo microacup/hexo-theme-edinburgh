@@ -19,5 +19,4 @@ scripts:
 css:
   bootstrap: //maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css
   fontawesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-  googlefonts: //fonts.lug.ustc.edu.cn/css?family=Crimson+Text|Open+Sans:300,800
   fancybox: //cdn.bootcss.com/fancybox/3.1.25/jquery.fancybox.min.css
