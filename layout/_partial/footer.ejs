@@ -1,14 +1,12 @@
 <footer class="text-center mt-5 py-5">
   <% for (var name in config.social) { %>
-      <a href="<%= config.social[name] %>" target="_blank">
-          <i class="fa fa-<%= name %> mx-4"></i>
-        </a>
-  <% }%>
-  
-  <% if (is_home()) { %>
-    <div class="host-coding">
-      <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
-    </div>
+  <a href="<%= config.social[name] %>" target="_blank">
+    <i class="fa fa-<%= name %> mx-4"></i>
+  </a>
+  <% }%> <% if (is_home()) { %>
+  <div class="host-coding">
+    <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  </div>
   <% }%>
 </footer>
 <script src="<%= theme.scripts.jquery %>"></script>
@@ -18,32 +16,65 @@
 <script src="<%= theme.scripts.moment %>"></script>
 
 <% if (theme.fancybox){ %>
-  <script src="<%= theme.scripts.fancybox %>"></script>
-<% } %>
+<script src="<%= theme.scripts.fancybox %>"></script>
+<% } %> <% if (is_home()) { %>
 <script type="text/javascript">
-  (function($){
-    // Caption
-  $('.portfolio-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-
-      var alt = this.alt;
-
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-
-      $(this).wrap('<a data-fancybox href="' + this.src + '" data-caption="' + alt + '" class="fancybox"></a>');
-    });
-
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
+  var link = '';
+  // 遍历所有的img标签
+  $('img').each((i, o) => {
+    var o = $(o);
+    // 判断图片的链接是否包含sinaimg关键字
+    if (o.attr('src').indexOf('sinaimg') > 0) {
+      // 给这个标签加上referrerPlicy属性
+      o.attr('referrerpolicy', 'no-referrer');
+      // 备份图片的src
+      link = o.attr('src');
+      // 重新设置src，让页面重新加载一次图片
+      o.attr('src', link);
+    }
   });
+</script>
+<% } else { %>
+<script type="text/javascript">
+  (function($) {
+    // Caption
+    $('.portfolio-content').each(function(i) {
+      $(this)
+        .find('img')
+        .each(function() {
+          // 新浪微博的图片防盗链
+          var o = $(this);
+          if (o.attr('src').indexOf('sinaimg') > 0) {
+            // 给这个标签加上referrerPlicy属性
+            o.attr('referrerpolicy', 'no-referrer');
+            link = o.attr('src');
+            o.attr('src', link);
+          }
 
-  if ($.fancybox){
-    $('.fancybox').fancybox();
-  }
+          if (
+            $(this)
+              .parent()
+              .hasClass('fancybox')
+          )
+            return;
+
+          var alt = this.alt;
+
+          if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+
+          $(this).wrap('<a data-fancybox href="' + this.src + '" data-caption="' + alt + '" class="fancybox"></a>');
+        });
+
+      $(this)
+        .find('.fancybox')
+        .each(function() {
+          $(this).attr('rel', 'article' + i);
+        });
+    });
+
+    if ($.fancybox) {
+      $('.fancybox').fancybox();
+    }
   })(jQuery);
 </script>
-
-<%- partial('baidu-tongji') %>
-<%- partial('google-analytics') %>
+<% }%> <%- partial('baidu-tongji') %> <%- partial('google-analytics') %>
